@@ -27,6 +27,10 @@ forms:
   chanting: "https://docs.google.com/forms/d/e/1FAIpQLScC0zhpUvoWl4cYihAECs3ogeIu0MOQLdEvJHYPpgS9n324HA/viewform"
   review:   "https://docs.google.com/forms/d/e/1FAIpQLSeUCXHJGkToljqtDoaTZ87Ym1Sb6Y63twQJY4PgKqFFIs1prg/viewform"
 
+# Contact form: messages are emailed by Web3Forms (free) to the owner of this key.
+# Get one at https://web3forms.com using bodhitara21@gmail.com, then paste it here.
+web3forms_key: "YOUR_WEB3FORMS_ACCESS_KEY"
+
 # Social links shown in the footer. "icon" is a Font Awesome brand icon name.
 social_links:
   - { name: Instagram, icon: instagram,       url: "https://www.instagram.com/bodhimindwell?igsh=YXdobm5wbWlydXpq" }

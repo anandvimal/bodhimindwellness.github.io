@@ -44,6 +44,51 @@
     });
   });
 
+  // Contact form (Web3Forms emails each message to Manjusha).
+  function lang() { return root.getAttribute('data-lang') === 'fr' ? 'fr' : 'en'; }
+  function translateOptions() {
+    document.querySelectorAll('option[data-fr]').forEach(function (o) {
+      if (!o.dataset.en) o.dataset.en = o.textContent;
+      o.textContent = lang() === 'fr' ? o.dataset.fr : o.dataset.en;
+    });
+  }
+  translateOptions();
+  new MutationObserver(translateOptions).observe(root, { attributes: true, attributeFilter: ['data-lang'] });
+
+  var MSG = {
+    en: { demo: "Demo only: once connected, this message goes straight to Manjusha's inbox.",
+          ok: "Thank you! Your message is on its way. We'll reply soon.",
+          err: 'Sorry, that didn’t send. Please email bodhitara21@gmail.com or WhatsApp +230 5762 4109.',
+          sending: 'Sending…' },
+    fr: { demo: 'Démo : une fois connecté, ce message arrivera directement chez Manjusha.',
+          ok: 'Merci ! Votre message est envoyé. Nous vous répondrons bientôt.',
+          err: 'Désolé, l’envoi a échoué. Écrivez à bodhitara21@gmail.com ou sur WhatsApp au +230 5762 4109.',
+          sending: 'Envoi…' }
+  };
+  document.querySelectorAll('form[data-web3forms]').forEach(function (form) {
+    var status = form.querySelector('.form-status');
+    var btn = form.querySelector('button[type="submit"]');
+    function say(key, kind) { status.hidden = false; status.textContent = MSG[lang()][key]; status.dataset.kind = kind; }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var data = Object.fromEntries(new FormData(form));
+      if (data.botcheck) return;
+      if (!data.access_key || data.access_key.indexOf('YOUR_') === 0) { say('demo', 'info'); return; }
+      var label = btn.innerHTML;
+      btn.disabled = true; btn.textContent = MSG[lang()].sending;
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) { return r.json(); }).then(function (res) {
+        if (!res.success) throw new Error(res.message);
+        form.reset(); say('ok', 'ok');
+      }).catch(function () { say('err', 'error'); })
+        .finally(function () { btn.disabled = false; btn.innerHTML = label; });
+    });
+  });
+
   // Tabs (contact page). Forms load when their tab is first opened.
   var tabs = document.querySelectorAll('[role="tab"]');
   if (tabs.length) {

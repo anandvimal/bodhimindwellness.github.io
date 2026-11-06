@@ -104,14 +104,24 @@ title: Bodhi Mind Wellness – Yoga, life coaching & wellness retreats in Maurit
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="cta-band">
-      <div>
-        <p class="eyebrow"><span class="l-en">Free · Monthly · Online</span><span class="l-fr">Gratuit · Mensuel · En ligne</span></p>
-        <h2><span class="l-en">Join our universal chanting circle</span><span class="l-fr">Rejoignez notre cercle de chant universel</span></h2>
+<section class="section section--alt" id="contact">
+  <div class="container contact-split">
+    <div>
+      <h2><span class="l-en">Write to us</span><span class="l-fr">Écrivez-nous</span></h2>
+      <p class="muted"><span class="l-en">A question about a retreat, a session or a class? Send us a message and Manjusha will reply personally.</span><span class="l-fr">Une question sur une retraite, une séance ou un cours ? Envoyez-nous un message, Manjusha vous répondra personnellement.</span></p>
+      <ul class="contact-lines">
+        <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">{{ site.whatsapp_display }}</a></li>
+        <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+      <div class="chant-note">
+        <i class="fa-solid fa-om" aria-hidden="true"></i>
+        <div>
+          <strong><span class="l-en">Free monthly chanting</span><span class="l-fr">Chant mensuel gratuit</span></strong>
+          <span><span class="l-en">Join our universal chanting circle online.</span><span class="l-fr">Rejoignez notre cercle de chant universel en ligne.</span></span>
+        </div>
+        <a class="link-arrow" href="{{ '/contact/#chanting' | relative_url }}"><span class="l-en">Sign up</span><span class="l-fr">S'inscrire</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <a class="btn btn-light" href="{{ '/contact/#chanting' | relative_url }}"><span class="l-en">Sign up for free</span><span class="l-fr">S'inscrire gratuitement</span></a>
     </div>
+    {% include contact-form.html %}
   </div>
 </section>

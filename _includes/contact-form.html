@@ -1,0 +1,38 @@
+{%- comment -%}
+  Short contact form. Replies are emailed to the owner of the Web3Forms access key
+  (set web3forms_key in _config.yml). Until a real key is set, the form runs in demo mode.
+{%- endcomment -%}
+<form class="contact-form" data-web3forms novalidate>
+  <input type="hidden" name="access_key" value="{{ site.web3forms_key }}">
+  <input type="hidden" name="subject" value="New message from bodhimindwellness.com">
+  <input type="hidden" name="from_name" value="Bodhi Mind Wellness website">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+  <div class="form-row">
+    <label class="field"><span class="field-label"><span class="l-en">Your name</span><span class="l-fr">Votre nom</span></span>
+      <input name="name" required autocomplete="name"></label>
+    <label class="field"><span class="field-label">Email</span>
+      <input name="email" type="email" required autocomplete="email"></label>
+  </div>
+  <div class="form-row">
+    <label class="field"><span class="field-label"><span class="l-en">WhatsApp / phone</span><span class="l-fr">WhatsApp / téléphone</span> <small class="muted"><span class="l-en">(optional)</span><span class="l-fr">(facultatif)</span></small></span>
+      <input name="phone" type="tel" autocomplete="tel"></label>
+    <label class="field"><span class="field-label"><span class="l-en">I'm interested in</span><span class="l-fr">Je suis intéressé·e par</span></span>
+      <select name="interest">
+        <option data-fr="Retraites bien-être">Wellness retreats</option>
+        <option data-fr="Coaching de vie &amp; thérapie">Life coaching &amp; therapy</option>
+        <option data-fr="Yogathérapie mesurée">Measured Yoga Therapy</option>
+        <option data-fr="Cours de yoga">Yoga classes</option>
+        <option data-fr="Cours de développement spirituel">Spiritual development courses</option>
+        <option data-fr="Chant mensuel gratuit">Free monthly chanting</option>
+        <option data-fr="Autre chose">Something else</option>
+      </select></label>
+  </div>
+  <label class="field"><span class="field-label">Message</span>
+    <textarea name="message" rows="4" required></textarea></label>
+  <div class="form-foot">
+    <button type="submit" class="btn btn-primary"><span class="l-en">Send message</span><span class="l-fr">Envoyer</span></button>
+    <p class="form-note"><span class="l-en">We only use your details to reply to you.</span><span class="l-fr">Vos coordonnées servent uniquement à vous répondre.</span></p>
+  </div>
+  <p class="form-status" role="status" aria-live="polite" hidden></p>
+</form>

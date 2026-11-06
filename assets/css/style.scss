@@ -457,3 +457,35 @@ a.contact-card:hover { border-color: var(--green); color: inherit; }
   html[data-lang="en"] .retreat-grid > .l-fr, html[data-lang="fr"] .retreat-grid > .l-en { display: none !important; }
   .hero-badges li { font-size: .95rem; padding: 6px 12px; }
 }
+
+/* ---------- Contact form ---------- */
+.contact-split { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(24px, 5vw, 56px); align-items: start; }
+@media (max-width: 820px) { .contact-split { grid-template-columns: 1fr; } }
+.contact-lines { list-style: none; padding: 0; margin: 0 0 20px; }
+.contact-lines li { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-weight: 600; }
+.contact-lines i { width: 18px; color: var(--lotus); text-align: center; }
+.contact-lines a { text-decoration: none; color: var(--green-deep); }
+.chant-note { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.chant-note > i { color: var(--lotus); font-size: 1.1rem; }
+.chant-note div { flex: 1; font-size: .9rem; line-height: 1.4; }
+.chant-note strong { display: block; color: var(--green-deep); }
+.chant-note span { color: var(--muted); }
+.contact-form { padding: clamp(18px, 3vw, 26px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; gap: 0; } }
+.field { display: block; margin-bottom: 12px; }
+.field-label { display: block; margin-bottom: 4px; font-size: .82rem; font-weight: 700; color: var(--ink-soft); }
+.field-label small { font-weight: 600; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--bg); color: var(--ink); font: inherit; font-size: .95rem; transition: border-color .2s, background .2s;
+}
+.field textarea { resize: vertical; min-height: 96px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--green); background: #fff; box-shadow: 0 0 0 3px var(--green-soft); }
+.form-foot { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
+.form-note { margin: 0; font-size: .82rem; color: var(--muted); }
+.form-status { margin: 12px 0 0; padding: 10px 12px; border-radius: var(--radius-sm); font-size: .9rem; font-weight: 600; }
+.form-status[data-kind="ok"] { background: var(--green-soft); color: var(--green-deep); }
+.form-status[data-kind="info"] { background: #fbf3e1; color: #7a5a1c; }
+.form-status[data-kind="error"] { background: var(--lotus-soft); color: #8c3653; }
+.hp { position: absolute; left: -9999px; }
