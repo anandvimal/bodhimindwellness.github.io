@@ -1,0 +1,69 @@
+---
+layout: page
+title: Who we are
+title_fr: Qui nous sommes
+eyebrow: About us
+eyebrow_fr: À propos
+intro: Each of us has received a calling to help others, based on our own experiences. We know what it's like to have a mind in turmoil, and to long for a pause where we can at last breathe freely.
+intro_fr: Chacune de nous a reçu un appel pour aider les autres, à partir de nos propres expériences. Nous savons ce que c'est d'avoir un esprit en ébullition, et de désirer une pause où l'on peut enfin respirer librement.
+permalink: /Team/
+redirect_from:
+  - /team/
+  - /about/
+---
+<section class="section">
+  <div class="container container--narrow">
+    <div class="l-en">
+      <p class="lead">In today's virtual world, it's easy to lose sight of the importance of deep connections in the real world. Many people become consumed by screens or overwhelmed by challenging life situations and past traumatic events, leading to unresolved emotional turmoil among other issues.</p>
+      <p>Our affordable coaching, therapy sessions and retreats provide the support needed to navigate these obstacles and achieve a healthy and fulfilling life, both mentally, emotionally and physically. We take pride in our satisfied clients, some of whom have even sponsored therapy sessions for those in financial need.</p>
+      <p>We understand the pain of going through hardships alone, or with people who are not present or authentic. The core values we endeavour to apply are:</p>
+    </div>
+    <div class="l-fr">
+      <p class="lead">Dans le monde virtuel d'aujourd'hui, il est facile de perdre de vue l'importance des connexions profondes dans le monde réel. De nombreuses personnes sont dévorées par les écrans ou submergées par des situations difficiles et des événements traumatiques passés, ce qui entraîne des troubles émotionnels non résolus, entre autres.</p>
+      <p>Nos séances de coaching, de thérapie et nos retraites abordables offrent le soutien nécessaire pour surmonter ces obstacles et mener une vie saine et épanouissante, tant mentalement qu'émotionnellement et physiquement. Nous sommes fières de nos clients satisfaits, dont certains ont même parrainé des séances de thérapie pour les personnes dans le besoin.</p>
+      <p>Nous comprenons la douleur de traverser des épreuves seul ou avec des gens qui ne sont pas présents ou authentiques. Les valeurs fondamentales que nous nous efforçons d'appliquer sont :</p>
+    </div>
+    <ul class="values">
+      <li><i class="fa-solid fa-heart" aria-hidden="true"></i><span class="l-en">Unconditional positive regard</span><span class="l-fr">Respect positif inconditionnel</span></li>
+      <li><i class="fa-solid fa-feather" aria-hidden="true"></i><span class="l-en">Authenticity</span><span class="l-fr">Authenticité</span></li>
+      <li><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i><span class="l-en">Empathy</span><span class="l-fr">Empathie</span></li>
+      <li><i class="fa-solid fa-lock" aria-hidden="true"></i><span class="l-en">Privacy &amp; ethics</span><span class="l-fr">Confidentialité &amp; éthique</span></li>
+      <li><i class="fa-solid fa-dove" aria-hidden="true"></i><span class="l-en">Nonviolence &amp; compassion</span><span class="l-fr">Non-violence &amp; compassion</span></li>
+      <li><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span class="l-en">Equality, without discrimination</span><span class="l-fr">Égalité, sans discrimination</span></li>
+    </ul>
+    <p class="muted" style="margin-top:14px;font-size:.9rem"><span class="l-en">We treat everyone equally, irrespective of race, colour, religion, sexual orientation or any other kind of categorisation.</span><span class="l-fr">Nous traitons tout le monde de manière égale, indépendamment de la race, la couleur, la religion, l'orientation sexuelle ou de toute autre catégorie.</span></p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head"><h2><span class="l-en">Our team</span><span class="l-fr">Notre équipe</span></h2></div>
+    <div class="team-grid">
+    {%- for m in site.data.team %}
+      <article class="member" id="{{ m.id }}">
+        <div class="member-head">
+          <img src="{{ m.photo | relative_url }}" alt="{{ m.name }}" width="84" height="84" loading="lazy">
+          <div>
+            <h2>{{ m.name }}</h2>
+            <p class="member-role"><span class="l-en">{{ m.role.en }}</span><span class="l-fr">{{ m.role.fr }}</span></p>
+          </div>
+        </div>
+        <div class="member-bio l-en">{{ m.bio.en | markdownify }}</div>
+        <div class="member-bio l-fr">{{ m.bio.fr | markdownify }}</div>
+      </article>
+    {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2><span class="l-en">Ready to take the first step?</span><span class="l-fr">Prêt à faire le premier pas ?</span></h2>
+        <p><span class="l-en">Book a session with the therapist of your choice, online or in person.</span><span class="l-fr">Réservez une séance avec la thérapeute de votre choix, en ligne ou en présentiel.</span></p>
+      </div>
+      <a class="btn btn-light" href="{{ '/contact/#contact' | relative_url }}"><span class="l-en">Book a session</span><span class="l-fr">Réserver une séance</span></a>
+    </div>
+  </div>
+</section>

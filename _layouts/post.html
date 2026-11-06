@@ -1,16 +1,87 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+{%- assign fr = false -%}{%- if page.lang == "fr" -%}{%- assign fr = true -%}{%- endif -%}
+{%- assign now_s = site.time | date: "%s" | plus: 0 -%}
+{%- assign end_s = page.end_date | date: "%s" | plus: 0 -%}
+{%- assign is_past = false -%}{%- if page.end_date and end_s < now_s -%}{%- assign is_past = true -%}{%- endif -%}
+{%- if page.ref -%}
+  {%- assign alt = site.posts | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first -%}
+{%- endif -%}
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-
-    <p class="post-meta">{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+<article class="retreat">
+  <header class="page-hero page-hero--image"{% if page.image %} style="--hero-image: url('{{ page.image | relative_url }}')"{% endif %}>
+    <div class="container">
+      <a class="back-link" href="{{ '/retreats/' | relative_url }}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> {% if fr %}Toutes les retraites{% else %}All retreats{% endif %}</a>
+      {%- if page.dates_label %}<p class="eyebrow">{{ page.dates_label }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.tagline %}<p class="lead">{{ page.tagline }}</p>{% endif %}
+    </div>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  {%- if page.type == "retreat" %}
+  <div class="container retreat-layout">
+    <aside class="retreat-aside">
+      <div class="facts-card">
+        {%- if is_past %}
+        <p class="facts-status"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> {% if fr %}Cette retraite a déjà eu lieu.{% else %}This retreat has already taken place.{% endif %}</p>
+        {%- endif %}
+        <dl class="facts">
+          <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Dates</dt><dd>{{ page.dates_label }}</dd></div>
+          <div><dt><i class="fa-regular fa-clock" aria-hidden="true"></i> {% if fr %}Durée{% else %}Length{% endif %}</dt><dd>{{ page.duration }}</dd></div>
+          <div><dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {% if fr %}Lieu{% else %}Where{% endif %}</dt><dd>{{ page.venue }}<br><span class="muted">{{ page.place }}</span></dd></div>
+          <div><dt><i class="fa-solid fa-language" aria-hidden="true"></i> {% if fr %}Langue{% else %}Language{% endif %}</dt><dd>{{ page.language }}</dd></div>
+          {%- if page.price_from %}
+          <div><dt><i class="fa-solid fa-tag" aria-hidden="true"></i> {% if fr %}Tarif{% else %}Price{% endif %}</dt><dd><strong class="price">{% if fr %}Dès{% else %}From{% endif %} €{{ page.price_from }}</strong>{% if page.includes %}<br><span class="muted">{{ page.includes }}</span>{% endif %}</dd></div>
+          {%- endif %}
+        </dl>
+        {%- if is_past %}
+        <a class="btn btn-primary btn-block" href="{{ '/contact/#contact' | relative_url }}">{% if fr %}Être informé des prochaines dates{% else %}Hear about the next dates{% endif %}</a>
+        {%- else %}
+        <a class="btn btn-primary btn-block" href="{{ '/contact/#retreat' | relative_url }}">{% if fr %}S'inscrire à la retraite{% else %}Register for this retreat{% endif %}</a>
+        {%- endif %}
+        <a class="btn btn-ghost btn-block" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> {% if fr %}Une question ?{% else %}Ask a question{% endif %}</a>
+        <ul class="facts-links">
+          {%- if alt %}<li><a href="{{ alt.url | relative_url }}" lang="{{ alt.lang }}"><i class="fa-solid fa-globe" aria-hidden="true"></i> {% if fr %}Read in English{% else %}Version française{% endif %}</a></li>{% endif %}
+          <li><a href="{{ '/retreat/2024/10/10/Travelling-to-Mauritius.html' | relative_url }}"><i class="fa-solid fa-plane" aria-hidden="true"></i> {% if fr %}Voyager à Maurice (en anglais){% else %}Travelling to Mauritius{% endif %}</a></li>
+        </ul>
+      </div>
+    </aside>
 
+    <div class="retreat-main prose">
+      {{ content }}
+
+      {%- if page.teachers %}
+      <section class="teachers">
+        <h2>{% if fr %}Vos enseignantes{% else %}Your teachers{% endif %}</h2>
+        <div class="teacher-list">
+          {%- for id in page.teachers -%}
+            {%- assign m = site.data.team | where: "id", id | first -%}
+            {%- if m %}
+            <a class="teacher" href="{{ '/Team/' | relative_url }}#{{ m.id }}">
+              <img src="{{ m.photo | relative_url }}" alt="" width="72" height="72" loading="lazy">
+              <span><strong>{{ m.name }}</strong><span class="muted">{% if fr %}{{ m.role.fr }}{% else %}{{ m.role.en }}{% endif %}</span></span>
+            </a>
+            {%- endif -%}
+          {%- endfor %}
+        </div>
+        {%- if page.teachers_note %}<p class="muted">{{ page.teachers_note }}</p>{% endif %}
+      </section>
+      {%- endif %}
+
+      <div class="cta-inline">
+        <div>
+          <h2>{% if fr %}Prêt·e à faire une pause ?{% else %}Ready for a pause?{% endif %}</h2>
+          <p>{% if fr %}Écrivez-nous pour toute question sur la retraite, l'hébergement ou le voyage.{% else %}Write to us with any question about the retreat, the rooms or getting here.{% endif %}</p>
+        </div>
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}{% if is_past %}#contact{% else %}#retreat{% endif %}">{% if fr %}Nous contacter{% else %}Contact us{% endif %}</a>
+      </div>
+    </div>
+  </div>
+  {%- else %}
+  <div class="container container--narrow prose section">
+    {{ content }}
+    <p><a class="btn btn-primary" href="{{ '/retreats/' | relative_url }}">{% if fr %}Voir les retraites{% else %}See our retreats{% endif %}</a></p>
+  </div>
+  {%- endif %}
 </article>

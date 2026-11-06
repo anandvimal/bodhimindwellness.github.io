@@ -1,0 +1,51 @@
+---
+layout: page
+title: Contact us
+title_fr: Nous contacter
+eyebrow: Get in touch
+eyebrow_fr: Écrivez-nous
+intro: Register for a retreat, book a session, or simply ask us a question.
+intro_fr: Inscrivez-vous à une retraite, réservez une séance ou posez-nous simplement une question.
+permalink: /contact/
+---
+<section class="section" id="forms">
+<div class="container">
+  <div class="contact-cards">
+    <a class="contact-card" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <div><strong>WhatsApp</strong><span>{{ site.whatsapp_display }}</span></div>
+    </a>
+    <a class="contact-card" href="mailto:{{ site.email }}">
+      <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+      <div><strong>Email</strong><span>{{ site.email }}</span></div>
+    </a>
+    <div class="contact-card">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      <div><strong><span class="l-en">Where we work</span><span class="l-fr">Où nous trouver</span></strong><span><span class="l-en">Mauritius · Bras-Panon, Réunion · Online</span><span class="l-fr">Maurice · Bras-Panon, La Réunion · En ligne</span></span></div>
+    </div>
+  </div>
+    <div class="tabs" role="tablist" aria-label="Forms">
+      <button type="button" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="true"><span class="l-en">Contact &amp; bookings</span><span class="l-fr">Contact &amp; réservations</span></button>
+      <button type="button" role="tab" id="tab-retreat" aria-controls="panel-retreat" aria-selected="false"><span class="l-en">Retreat registration</span><span class="l-fr">Inscription retraite</span></button>
+      <button type="button" role="tab" id="tab-chanting" aria-controls="panel-chanting" aria-selected="false"><span class="l-en">Free chanting</span><span class="l-fr">Chant gratuit</span></button>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact">
+      <p class="tab-intro"><span class="l-en">Coaching, yoga therapy, yoga classes, courses, or a question: tell us what you're looking for.</span><span class="l-fr">Coaching, yogathérapie, cours de yoga, formations ou une question : dites-nous ce que vous recherchez.</span></p>
+      <div class="form-frame"><iframe src="{{ site.forms.contact }}?embedded=true" height="1800" loading="lazy" title="Contact and subscription form">Loading…</iframe></div>
+      <p class="form-fallback"><a href="{{ site.forms.contact }}" target="_blank" rel="noopener"><span class="l-en">Open the form in a new tab</span><span class="l-fr">Ouvrir le formulaire dans un nouvel onglet</span></a></p>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="panel-retreat" aria-labelledby="tab-retreat" hidden>
+      <p class="tab-intro"><span class="l-en">Register for one of our wellness retreats in Mauritius.</span><span class="l-fr">Inscrivez-vous à l'une de nos retraites bien-être à l'île Maurice.</span></p>
+      <div class="form-frame"><iframe data-src="{{ site.forms.retreat }}?embedded=true" height="2250" title="Retreat registration form">Loading…</iframe></div>
+      <p class="form-fallback"><a href="{{ site.forms.retreat }}" target="_blank" rel="noopener"><span class="l-en">Open the form in a new tab</span><span class="l-fr">Ouvrir le formulaire dans un nouvel onglet</span></a></p>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="panel-chanting" aria-labelledby="tab-chanting" hidden>
+      <p class="tab-intro"><span class="l-en">Join our free monthly online universal chanting sessions.</span><span class="l-fr">Rejoignez nos sessions mensuelles gratuites de chant universel en ligne.</span></p>
+      <div class="form-frame"><iframe data-src="{{ site.forms.chanting }}?embedded=true" height="1950" title="Universal chanting sign-up form">Loading…</iframe></div>
+      <p class="form-fallback"><a href="{{ site.forms.chanting }}" target="_blank" rel="noopener"><span class="l-en">Open the form in a new tab</span><span class="l-fr">Ouvrir le formulaire dans un nouvel onglet</span></a></p>
+    </div>
+  </div>
+</section>

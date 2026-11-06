@@ -1,48 +1,42 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand--light" href="{{ '/' | relative_url }}">
+        {% include logo.html %}
+        <span class="brand-text"><span class="brand-name">Bodhi Mind</span><span class="brand-sub">Wellness</span></span>
+      </a>
+      <p class="l-en">Yoga, meditation, life coaching and wellness retreats in Mauritius, Réunion and online.</p>
+      <p class="l-fr">Yoga, méditation, coaching de vie et retraites bien-être à l'île Maurice, à La Réunion et en ligne.</p>
+      <ul class="social">
+        {%- for s in site.social_links %}
+        <li><a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}" title="{{ s.name }}"><i class="fa-brands fa-{{ s.icon }}" aria-hidden="true"></i></a></li>
+        {%- endfor %}
+      </ul>
     </div>
 
-    <div class="social-links">
-      {% if site.social_links %}
-        <ul class="social-links">
-          {% for link in site.social_links %}
-            <li>
-              <a href="{{ link.user_url }}" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-{{ link.platform }}"></i>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+    <div>
+      <h2 class="footer-title"><span class="l-en">Explore</span><span class="l-fr">Découvrir</span></h2>
+      <ul class="footer-links">
+        <li><a href="{{ '/retreats/' | relative_url }}"><span class="l-en">Retreats</span><span class="l-fr">Retraites</span></a></li>
+        <li><a href="{{ '/Services/' | relative_url }}">Services</a></li>
+        <li><a href="{{ '/Team/' | relative_url }}"><span class="l-en">About us</span><span class="l-fr">Qui sommes-nous</span></a></li>
+        <li><a href="{{ '/reviews/' | relative_url }}"><span class="l-en">Reviews</span><span class="l-fr">Avis</span></a></li>
+        <li><a href="{{ '/retreat/2024/10/10/Travelling-to-Mauritius.html' | relative_url }}"><span class="l-en">Travelling to Mauritius</span><span class="l-fr">Voyager à Maurice</span></a></li>
+      </ul>
     </div>
-    
 
+    <div>
+      <h2 class="footer-title"><span class="l-en">Get in touch</span><span class="l-fr">Nous contacter</span></h2>
+      <ul class="footer-links footer-contact">
+        <li><a href="mailto:{{ site.email }}"><i class="fa-regular fa-envelope" aria-hidden="true"></i> {{ site.email }}</a></li>
+        <li><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> {{ site.whatsapp_display }}</a></li>
+        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span class="l-en">Mauritius · Réunion · Online</span><span class="l-fr">Maurice · La Réunion · En ligne</span></li>
+      </ul>
+      <a class="btn btn-light" href="{{ '/contact/' | relative_url }}"><span class="l-en">Contact us</span><span class="l-fr">Écrivez-nous</span></a>
+    </div>
   </div>
-
+  <div class="container footer-bottom">
+    <p>© {{ site.time | date: "%Y" }} Bodhi Mind Wellness</p>
+    <p><a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+  </div>
 </footer>

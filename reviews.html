@@ -1,0 +1,68 @@
+---
+layout: page
+title: Reviews
+title_fr: Avis
+eyebrow: Kind words
+eyebrow_fr: Témoignages
+intro: What our retreat guests, yoga students and trainees say about their experience with us.
+intro_fr: Ce que nos participants aux retraites, élèves de yoga et stagiaires disent de leur expérience avec nous.
+permalink: /reviews/
+---
+{%- assign arvind = site.data.reviews | first -%}
+<section class="section">
+  <figure class="container review-feature" style="margin-top:0;margin-bottom:0">
+    <span class="stars" aria-hidden="true">★★★★★</span>
+    <blockquote>“{{ arvind.text }}”</blockquote>
+    <figcaption><strong style="color:var(--green-deep)">{{ arvind.name }}</strong> · {{ arvind.detail }}</figcaption>
+  </figure>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="masonry">
+      {%- assign groups = "retreat|Retreat|Retraite,yoga|Yoga classes|Cours de yoga,training|Yoga teacher training|Formation de professeurs" | split: "," -%}
+      {%- for g in groups -%}
+        {%- assign gp = g | split: "|" -%}
+        {%- assign items = site.data.reviews | where: "group", gp[0] -%}
+        {%- for r in items -%}
+          {%- unless r.name == arvind.name %}
+      <figure class="quote-card">
+        <span class="group-label"><span class="l-en">{{ gp[1] }}</span><span class="l-fr">{{ gp[2] }}</span></span>
+        <blockquote>{{ r.text }}</blockquote>
+        <figcaption><strong>{{ r.name }}</strong>{{ r.detail }}</figcaption>
+      </figure>
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endfor %}
+    </div>
+    <p class="muted center" style="font-size:.88rem;margin:4px 0 0"><span class="l-en">We protect the privacy of our past clients and team members.</span><span class="l-fr">Nous protégeons la vie privée de nos anciens clients et membres de l'équipe.</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2><span class="l-en">Yoga teacher training</span><span class="l-fr">Formation de professeurs</span></h2>
+      <a class="link-arrow" href="https://www.youtube.com/@Bodhimindwell" target="_blank" rel="noopener"><span class="l-en">More on YouTube</span><span class="l-fr">Plus sur YouTube</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="video-grid">
+      {% include video.html id="jcocHcgtiJI" title="Yoga teacher training review" %}
+      {% include video.html id="e5ZWKyPfEok" title="Yoga teacher training review" %}
+      {% include video.html id="HeED-i4QPQs" title="Yoga teacher training review" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container split">
+    <div class="split-media"><img src="{{ '/assets/img/retreat-2017.jpg' | relative_url }}" alt="Participants of the March 2017 retreat" width="800" height="1100" loading="lazy"></div>
+    <div class="split-text">
+      <p class="eyebrow"><span class="l-en">Help us</span><span class="l-fr">Aidez-nous</span></p>
+      <h2><span class="l-en">Have you practised with us?</span><span class="l-fr">Avez-vous pratiqué avec nous ?</span></h2>
+      <p class="l-en">Our old website crashed and we lost many of our reviews. If you are a past student, teacher or client, we would be very grateful if you could share a few words about your experience. Thank you.</p>
+      <p class="l-fr">Notre ancien site a planté et nous avons perdu beaucoup d'avis. Si vous êtes un ancien élève, enseignant ou client, nous vous serions très reconnaissantes de partager quelques mots sur votre expérience. Merci.</p>
+      <p class="muted"><span class="l-en">Pictured: our March 2017 retreat.</span><span class="l-fr">En photo : notre retraite de mars 2017.</span></p>
+      <a class="btn btn-primary" href="{{ site.forms.review }}" target="_blank" rel="noopener"><span class="l-en">Leave a review</span><span class="l-fr">Laisser un avis</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>

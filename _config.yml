@@ -1,83 +1,65 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site settings for bodhimindwellness.com
+# Changes to this file need a site rebuild (GitHub does this automatically on every push).
 
-title: Bodhi Mind Wellness Retreats
+title: Bodhi Mind Wellness
+tagline: Retreats · Yoga · Life coaching
 email: bodhitara21@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-    Take the first step towards a happier and healthier life. Book your first coaching session today.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "tyltonline.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ManjushaCoonjan
-github_username:  tyltonline
+whatsapp: "23057624109"            # digits only, used for the WhatsApp button
+whatsapp_display: "+230 5762 4109"
+description: >-
+  Yoga, meditation, life coaching and wellness retreats in Mauritius, Réunion and online,
+  with Dr Manjusha Coonjan and team. Take the first step towards a happier and healthier life.
+url: "https://bodhimindwellness.com"
+baseurl: ""
+lang: en
+logo: /assets/img/team-manjusha.jpg
+author:
+  name: Dr Manjusha Coonjan
+twitter:
+  username: ManjushaCoonjan
+social:
+  name: Bodhi Mind Wellness
+
+# Google Forms used across the site. Update a link here and it changes everywhere.
+forms:
+  retreat:  "https://docs.google.com/forms/d/e/1FAIpQLSfoXbaHzcdW5N0Hgeh5czhSiW1B2913ZlO1CfV3y4_cfvGO5A/viewform"
+  contact:  "https://docs.google.com/forms/d/e/1FAIpQLSccfTQDszKqBlyytArpcvOY32NywZY8rRkNvjiObhijEozDjw/viewform"
+  chanting: "https://docs.google.com/forms/d/e/1FAIpQLScC0zhpUvoWl4cYihAECs3ogeIu0MOQLdEvJHYPpgS9n324HA/viewform"
+  review:   "https://docs.google.com/forms/d/e/1FAIpQLSeUCXHJGkToljqtDoaTZ87Ym1Sb6Y63twQJY4PgKqFFIs1prg/viewform"
+
+# Social links shown in the footer. "icon" is a Font Awesome brand icon name.
+social_links:
+  - { name: Instagram, icon: instagram,       url: "https://www.instagram.com/bodhimindwell?igsh=YXdobm5wbWlydXpq" }
+  - { name: Facebook,  icon: facebook-f,      url: "https://www.facebook.com/profile.php?id=100033228883018" }
+  - { name: YouTube,   icon: youtube,         url: "https://www.youtube.com/@Bodhimindwell" }
+  - { name: TikTok,    icon: tiktok,          url: "https://www.tiktok.com/@bodhimind.wellnes?_t=8rDqKTQraPW&_r=1" }
+  - { name: WhatsApp,  icon: whatsapp,        url: "https://wa.me/23057624109" }
+  - { name: Spotify,   icon: spotify,         url: "https://open.spotify.com/user/31paq7y7ww7wuyyk7k6rv5xmmcmm?si=9dcKpU8YSgOwJ85Pp-APfA" }
+  - { name: Discord,   icon: discord,         url: "https://discord.gg/ZaJT55MePn" }
+  - { name: X,         icon: x-twitter,       url: "https://x.com/ManjushaCoonjan" }
+  - { name: LinkedIn,  icon: linkedin-in,     url: "https://www.linkedin.com/in/dr-manjusha-coonjan-b9a9428a" }
 
 # Build settings
-# theme: minima
-theme: minima
+permalink: date
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 plugins:
-# - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-redirect-from
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
 
-# Generate social links in footer.
-social_links:
- - { platform: github,         user_url: "https://github.com/bodhimindwellness" }
- - { platform: facebook,       user_url: "https://www.facebook.com/profile.php?id=100033228883018" }
- - { platform: instagram,      user_url: "https://www.instagram.com/bodhimindwell?igsh=YXdobm5wbWlydXpq" }
- - { platform: x,              user_url: "https://x.com/ManjushaCoonjan" }
- - { platform: tiktok,         user_url: "https://www.tiktok.com/@bodhimind.wellnes?_t=8rDqKTQraPW&_r=1" }
- - { platform: youtube,        user_url: "https://www.youtube.com/@Bodhimindwell" }
- - { platform: discord,        user_url: "https://discord.gg/ZaJT55MePn" }
- - { platform: whatsapp,          user_url: "https://wa.me/23057624109" }
- - { platform: spotify,       user_url: "https://open.spotify.com/user/31paq7y7ww7wuyyk7k6rv5xmmcmm?si=9dcKpU8YSgOwJ85Pp-APfA" }
-#  - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
-#  - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
-#  - { platform: github,         user_url: "https://github.com/jekyll/minima" }
-#  - { platform: gitlab,         user_url: "https://gitlab.com/jekyll" }
-#  - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
-#  - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
-#  - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
- - { platform: linkedin,       user_url: "https://www.linkedin.com/in/dr-manjusha-coonjan-b9a9428a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
-#  - { platform: microdotblog,   user_url: "https://micro.blog/jekyll" }
-#  - { platform: pinterest,      user_url: "https://www.pinterest.com/jekyll" }
-#  - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/1234567/jekyll" }
-#  - { platform: telegram,       user_url: "https://t.me/jekyll" }
-#  - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
-#  - { platform: x,              user_url: "https://x.com/jekyllrb" }
-#  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - script/
+  - README.md
+  - vendor/
+  - "assets/images/Retreats powerpoint.pptx"

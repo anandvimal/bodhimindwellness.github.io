@@ -1,0 +1,8 @@
+{%- comment -%}
+  YouTube video that only loads YouTube when clicked (keeps pages fast).
+  Usage: {% include video.html id="VIDEO_ID" title="Optional title" %}
+{%- endcomment -%}
+<a class="video" href="https://www.youtube.com/watch?v={{ include.id }}" data-yt="{{ include.id }}" target="_blank" rel="noopener" style="background-image:url('https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg')">
+  <span class="video-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+  <span class="sr-only">{{ include.title | default: "Play video" }}</span>
+</a>

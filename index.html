@@ -1,0 +1,117 @@
+---
+layout: default
+title: Bodhi Mind Wellness – Yoga, life coaching & wellness retreats in Mauritius
+---
+{%- assign manjusha = site.data.team | where: "id", "manjusha" | first -%}
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow"><span class="l-en">Mauritius · Réunion · Online</span><span class="l-fr">Maurice · La Réunion · En ligne</span></p>
+    <h1>
+      <span class="l-en">A restorative pause for body, mind <em>&amp; heart</em></span>
+      <span class="l-fr">Une pause réparatrice pour le corps, l'esprit <em>&amp; le cœur</em></span>
+    </h1>
+    <p class="lead">
+      <span class="l-en">Yoga, meditation, coaching and deep relaxation for a lasting transformation.</span>
+      <span class="l-fr">Yoga, méditation, coaching et relaxation profonde vers une transformation durable.</span>
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-light" href="{{ '/retreats/' | relative_url }}"><span class="l-en">Explore retreats</span><span class="l-fr">Voir les retraites</span></a>
+      <a class="btn btn-outline-light" href="{{ '/contact/' | relative_url }}"><span class="l-en">Book a session</span><span class="l-fr">Réserver une séance</span></a>
+    </div>
+    <ul class="hero-badges">
+      <li><i class="fa-solid fa-user-doctor" aria-hidden="true"></i><span class="l-en">Led by a medical doctor</span><span class="l-fr">Animé par une médecin</span></li>
+      <li><i class="fa-solid fa-seedling" aria-hidden="true"></i><span class="l-en">All levels welcome</span><span class="l-fr">Tous niveaux</span></li>
+      <li><i class="fa-solid fa-language" aria-hidden="true"></i><span class="l-en">English &amp; French</span><span class="l-fr">Français &amp; anglais</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2><span class="l-en">How we can help</span><span class="l-fr">Comment nous pouvons vous aider</span></h2>
+      <a class="link-arrow" href="{{ '/Services/' | relative_url }}"><span class="l-en">All services</span><span class="l-fr">Tous les services</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="service-grid">
+      <a class="service-item" href="{{ '/retreats/' | relative_url }}"><i class="fa-solid fa-umbrella-beach" aria-hidden="true"></i><div>
+        <h3><span class="l-en">Wellness retreats</span><span class="l-fr">Retraites bien-être</span></h3>
+        <p><span class="l-en">Yoga, nature and culture on the beaches of Mauritius.</span><span class="l-fr">Yoga, nature et culture sur les plages de l'île Maurice.</span></p></div></a>
+      <a class="service-item" href="{{ '/Services/#coaching' | relative_url }}"><i class="fa-regular fa-comments" aria-hidden="true"></i><div>
+        <h3><span class="l-en">Life coaching &amp; therapy</span><span class="l-fr">Coaching de vie &amp; thérapie</span></h3>
+        <p><span class="l-en">A safe, non-judgmental space. Online or in Réunion.</span><span class="l-fr">Une écoute sans jugement. En ligne ou à La Réunion.</span></p></div></a>
+      <a class="service-item" href="{{ '/Services/#yoga-therapy' | relative_url }}"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><div>
+        <h3><span class="l-en">Measured Yoga Therapy</span><span class="l-fr">Yogathérapie mesurée</span></h3>
+        <p><span class="l-en">Gentle techniques to prevent or control health issues.</span><span class="l-fr">Un complément doux à votre traitement actuel.</span></p></div></a>
+      <a class="service-item" href="{{ '/Services/#yoga' | relative_url }}"><i class="fa-solid fa-person-praying" aria-hidden="true"></i><div>
+        <h3><span class="l-en">Yoga classes</span><span class="l-fr">Cours de yoga</span></h3>
+        <p><span class="l-en">Traditional, chair and trauma-sensitive yoga, from €15.</span><span class="l-fr">Traditionnel, sur chaise, sensible aux traumatismes, dès 15 €.</span></p></div></a>
+      <a class="service-item" href="{{ '/Services/#courses' | relative_url }}"><i class="fa-solid fa-book-open" aria-hidden="true"></i><div>
+        <h3><span class="l-en">Spiritual development</span><span class="l-fr">Développement spirituel</span></h3>
+        <p><span class="l-en">Chakras, karma and Tara practice, at your own pace.</span><span class="l-fr">Chakras, karma et pratique de Tara, à votre rythme.</span></p></div></a>
+      <a class="service-item" href="{{ '/contact/#chanting' | relative_url }}"><i class="fa-solid fa-om" aria-hidden="true"></i><div>
+        <h3><span class="l-en">Monthly chanting</span><span class="l-fr">Chant mensuel</span><span class="tag-free"><span class="l-en">Free</span><span class="l-fr">Gratuit</span></span></h3>
+        <p><span class="l-en">Peace and compassion for all beings, online.</span><span class="l-fr">Paix et compassion pour tous les êtres, en ligne.</span></p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="retreats">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2><span class="l-en">Retreats in Mauritius</span><span class="l-fr">Retraites à l'île Maurice</span></h2>
+        <p class="lead"><span class="l-en">Sun, sand, sea, silence. Every activity is optional.</span><span class="l-fr">Soleil, sable, mer, silence. Toutes les activités sont en option.</span></p>
+      </div>
+      <a class="link-arrow" href="{{ '/retreats/' | relative_url }}"><span class="l-en">All retreats</span><span class="l-fr">Toutes les retraites</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    {% include retreat-list.html show_past=true %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--narrow-media">
+    <div class="split-media"><img class="portrait" src="{{ manjusha.photo | relative_url }}" alt="Dr Manjusha Coonjan" width="280" height="280" loading="lazy"></div>
+    <div class="split-text">
+      <p class="eyebrow"><span class="l-en">Meet your guide</span><span class="l-fr">Votre guide</span></p>
+      <h2>Dr Manjusha Coonjan</h2>
+      <p class="l-en">A general practitioner, yoga therapist and life coach, Manjusha healed her own health problems through yoga and went on to train in yoga therapy in India and the United States. She offers a nurturing, silent space and an attentive, empathetic ear.</p>
+      <p class="l-fr">Médecin généraliste, yogathérapeute et coach de vie, Manjusha a traité ses propres problèmes de santé grâce au yoga, puis s'est formée à la yogathérapie en Inde et aux États-Unis. Elle offre un espace sécurisé et une écoute attentive et empathique.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="{{ '/Team/' | relative_url }}"><span class="l-en">Meet the team</span><span class="l-fr">Découvrir l'équipe</span></a>
+        <a class="btn btn-ghost" href="{{ '/contact/' | relative_url }}"><span class="l-en">Contact Manjusha</span><span class="l-fr">Contacter Manjusha</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2><span class="l-en">Kind words</span><span class="l-fr">Témoignages</span></h2>
+      <a class="link-arrow" href="{{ '/reviews/' | relative_url }}"><span class="l-en">All reviews</span><span class="l-fr">Tous les avis</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="grid grid-3">
+      {%- assign featured = site.data.reviews | where: "featured", true -%}
+      {%- for r in featured limit: 3 %}
+      <figure class="quote-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>{{ r.short | default: r.text }}</blockquote>
+        <figcaption><strong>{{ r.name }}</strong>{{ r.detail }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <p class="eyebrow"><span class="l-en">Free · Monthly · Online</span><span class="l-fr">Gratuit · Mensuel · En ligne</span></p>
+        <h2><span class="l-en">Join our universal chanting circle</span><span class="l-fr">Rejoignez notre cercle de chant universel</span></h2>
+      </div>
+      <a class="btn btn-light" href="{{ '/contact/#chanting' | relative_url }}"><span class="l-en">Sign up for free</span><span class="l-fr">S'inscrire gratuitement</span></a>
+    </div>
+  </div>
+</section>

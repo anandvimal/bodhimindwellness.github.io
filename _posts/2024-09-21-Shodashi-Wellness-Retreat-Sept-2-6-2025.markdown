@@ -1,23 +1,26 @@
 ---
-layout: post
-title:  "Shodashi Wellness Retreat Sept 2-6 2025"
-date:   2024-09-21 10:36:11 +0400
-categories: jekyll update
+layout: "post"
+type: "retreat"
+lang: "en"
+ref: "shodashi-2025"
+title: "Shodashi Wellness Retreat"
+tagline: "5-day yoga, nature and culture retreat at a 5-star resort"
+date: 2024-09-21 10:36:11 +0400
+categories: "jekyll update"
+start_date: 2025-09-02
+end_date: 2025-09-06
+dates_label: "Tuesday 2 – Saturday 6 September 2025"
+duration: "5 days · 4 nights"
+place: "St Félix, Mauritius"
+venue: "Shanti Maurice Resort & Spa"
+language: "English, with French explanation"
+price_from: 1989
+includes: "All activities, full board and accommodation"
+image: "/assets/img/retreat-shodashi.jpg"
+teachers: [manjusha, simla]
+teachers_note: "Another of our teachers may assist in some classes."
 ---
-5 Day Yoga, Nature and Culture Wellness Retreat
-
-### DATES: 
-Tuesday September 2 to Saturday 6, 2025
-(5 days - 4 nights)
-
-### LANGUAGE: 
-English with French explanation.
-
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
-[Back to all retreats](https://bodhimindwellness.com/)
-
-## SUMMARY
+## Summary
 Easy yoga practice. Nature immersion. Cultural tour. All optional. Participate at your own pace, alone, with a buddy or your sweetheart for great intimate moments shared in wellness or why not as a group of friends or family for a healthy stay on a tropical paradise island.
 
 Enjoy a full-on ecotourist retreat where your day starts with a comfortable yoga practice (or time alone) followed by long walks in awesome nature spots in our endemic tropical forest on Mauritius island. Come back to relax on the white sandy beach and have a dip in the safe turquoise lagoon protected by coral reefs and nurtured by the Indian Ocean, finishing the day with a breathtaking sunset. On the third day, we’ll dab in the Mauritian cultural roots with a visit to our capital city of Port Louis, led by our facilitators.
@@ -27,13 +30,9 @@ We have tried to bring the most out of the retreat in a gist of 5 days where you
 
 Take a look at our [Dharani](https://bodhimindwellness.com/retreat/2024/10/08/Dharani-Wellness-Retreat-July-27-31-2025.html) (July 27-31) and [Green Tara ](https://bodhimindwellness.com/jekyll/update/2024/10/01/Green-Tara-Retreat-August-1-3-2025.html) retreats (August 1-3, 2025) at Flic en Flac.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0w5hGUKeN9k?autoplay=1&mute=1&loop=1&playlist=0w5hGUKeN9k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include video.html id="0w5hGUKeN9k" %}
 
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
-[Back to all retreats](https://bodhimindwellness.com/)
-
-## DESCRIPTION
+## Description
 Join us for this awesome luxury retreat on the south coast of Mauritius island with all that is necessary to make your stay unforgettable. Take a [virtual tour](https://my.threesixty.tours/app/v/308jvj/0y6a4i) to get an idea of the fantastic location that awaits you. 
 
 Join us for this exceptional retreat on the west coast of Mauritius island where the weather is warm during winter in the southern hemisphere (June-September). We will stay at a comfortable family-owned villa less than 5 minutes walk to the beach where our morning and evening classes will be held. We’ll enjoy authentic healthy Mauritian food.
@@ -50,11 +49,9 @@ In this retreat, you will enjoy
 
 *Please note that all excursions are subject to change according to the weather or any such unpredictable factors. We will do our best to stick to our proposed schedule. 
 
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
 Take a [virtual tour](https://my.threesixty.tours/app/v/308jvj/0y6a4i)
 
-## FEATURES
+## Features
 ### Styles
 + Hatha yoga - postures, breathing, relaxation, contemplation
 + Laya yoga- chanting, chakra balancing
@@ -64,10 +61,10 @@ Take a [virtual tour](https://my.threesixty.tours/app/v/308jvj/0y6a4i)
 + Nature immersion walks
 + Cultural tour to the capital city of Port Louis, discovering the multicultural Mauritian roots
 
-### Skill level:
+### Skill level
 Newbie, Beginner, Intermediate 
 
-## PROGRAM
+## Program
 All activities are optional. You can choose to be alone whenever you want to. All activities are subject to change according to the weather or any such unpredictable factors. We will do our best to stick to our proposed schedule but please allow flexibility.
 Here is a sample day 2
 
@@ -80,26 +77,14 @@ Here is a sample day 2
 - 20:00	Night gathering
 - 21:00	Rest
 
-
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
-## FOOD
+## Food
 The price of the retreat includes the cost of staying full board. Meals provided: breakfast, lunch and dinner.
 
 Free choice a la carte breakfast, lunch and diner. 
 In ayurveda, one of the common ways of toxin production in the body is through bad digestion. Digestion depends not only on the type of food but predominantly, on our emotional-mental state. If we are happy and like what we eat, digestion happens efficiently and health is maintained. 
 The location is exceptionally beautiful and many participants like to celebrate their trip. We do not have any intention of dousing your happiness. It will be the fuel for your enthusiastic effort in the retreat. No restrictions will be applied on the type of food allowed during the retreat. Instead, we will practise mindful eating where you will become more conscious of the effects of the food on your being. Consciousness will be our leitmotif all throughout so that it intensifies during your stay and remains thereafter.
 
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
-[Back to all retreats](https://bodhimindwellness.com/)
-
-## TEACHERS
-
-|<a href="https://bodhimindwellness.com/Team/"> ![Dr Manjusha Coonjan](/assets/images/manjushacircle.jpg "Dr Manjusha Coonjan") Dr Manjusha Coonjan </a>| <a href="https://bodhimindwellness.com/Team/"> ![Simla Lubah](/assets/images/simlacircle.jpg "Simla Lubah") Simla Lubah </a>| Or another of our teachers may assist in some classes. |
-
-
-## LOCATION
+## Location
 [Shanti Maurice 5-star Resort & Spa](https://shantimaurice.com/) , St Felix, Mauritius Island
 
 ### St Felix
@@ -116,13 +101,9 @@ Rooms feature simple, timeless décor, and are tastefully furnished with large a
 
 Shanti Spa, a 75,000 sq. feet sanctuary of pure relaxation and self-discovery offers a range of therapies and treatments designed to cleanse the body, invigorate the mind, and soothe the soul. Enjoy re-energizing workouts, invigorating massages, and wellness sessions that equip you with tools to maintain your health after your visit. Experience a journey that revitalises your spirit and enhances your well-being.
 
+{% include video.html id="xlpzMX60blg" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xlpzMX60blg?autoplay=1&mute=1&loop=1&playlist=xlpzMX60blg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
-## ACCOMMODATION & FEES:
+## Accommodation & fees
 
 Take a [virtual tour](https://my.threesixty.tours/app/v/308jvj/0y6a4i) to make a better choice.
 
@@ -135,10 +116,8 @@ Shared room with German bedding:
 Shared room with twin beds: 
 2149 euros per participant Junior Suite Oceanfront (first floor). According to availability. Come with a buddy to share the room and get a 5% discount EACH!
 
-
 Shared room for couples: 
 3979 euros per couple in Junior Suite Oceanview (ground & first floor). Other categories of room available on request.
-
 
 ### Single room
 Single occupancy room with double bed
@@ -151,13 +130,4 @@ Junior Suite Oceanfront (first floor): 3199 euros
 
 Junior Suite Beachfront (ground floor): 3599 euros
 
-[Register for Shodashi Wellness Retreat](https://bodhimindwellness.com/contact/)
-
-[See all retreats](https://bodhimindwellness.com/)
-
-Do not hesitate to [contact us](https://tyltonline.github.io/contact/) for further info.
-
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Do not hesitate to [contact us](/contact/) for further info.

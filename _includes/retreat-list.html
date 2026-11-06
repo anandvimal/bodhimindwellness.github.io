@@ -1,0 +1,56 @@
+{%- comment -%}
+  Lists retreats, split into upcoming and past by their end_date.
+  A retreat moves to "past" the next time the site is rebuilt after it ends.
+  Params: show_past (true/false), past_limit (number)
+{%- endcomment -%}
+{%- assign now_s = site.time | date: "%s" | plus: 0 -%}
+{%- assign retreats = site.posts | where: "type", "retreat" | sort: "start_date" -%}
+{%- assign up_en = 0 -%}{%- assign up_fr = 0 -%}
+
+<div class="grid grid-3 retreat-grid">
+  {%- for r in retreats -%}
+    {%- assign end_s = r.end_date | date: "%s" | plus: 0 -%}
+    {%- if end_s >= now_s -%}
+      {%- include retreat-card.html r=r -%}
+      {%- if r.lang == "fr" -%}{%- assign up_fr = up_fr | plus: 1 -%}{%- else -%}{%- assign up_en = up_en | plus: 1 -%}{%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+{%- if up_en == 0 %}
+<div class="empty-state l-en">
+  <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+  <div>
+    <h3>New retreat dates are on their way</h3>
+    <p>We're preparing our next retreats in Mauritius. Leave your details and we'll tell you first, or message us on WhatsApp.</p>
+  </div>
+  <div class="empty-actions">
+    <a class="btn btn-primary" href="{{ '/contact/#contact' | relative_url }}">Keep me posted</a>
+    <a class="btn btn-ghost" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+  </div>
+</div>
+{%- endif %}
+{%- if up_fr == 0 %}
+<div class="empty-state l-fr">
+  <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+  <div>
+    <h3>De nouvelles dates arrivent bientôt</h3>
+    <p>Nous préparons nos prochaines retraites à l'île Maurice. Laissez-nous vos coordonnées pour être informé en premier, ou écrivez-nous sur WhatsApp.</p>
+  </div>
+  <div class="empty-actions">
+    <a class="btn btn-primary" href="{{ '/contact/#contact' | relative_url }}">Me tenir informé</a>
+    <a class="btn btn-ghost" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+  </div>
+</div>
+{%- endif %}
+
+{%- if include.show_past %}
+<h3 class="subhead"><span class="l-en">Past retreats</span><span class="l-fr">Retraites passées</span></h3>
+<div class="grid grid-3 retreat-grid">
+  {%- assign past = retreats | reverse -%}
+  {%- for r in past -%}
+    {%- assign end_s = r.end_date | date: "%s" | plus: 0 -%}
+    {%- if end_s < now_s -%}{%- include retreat-card.html r=r past=true -%}{%- endif -%}
+  {%- endfor -%}
+</div>
+{%- endif %}

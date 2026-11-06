@@ -1,0 +1,22 @@
+{%- assign r = include.r -%}
+{%- assign fr = false -%}{%- if r.lang == "fr" -%}{%- assign fr = true -%}{%- endif -%}
+<article class="card retreat-card l-{{ r.lang | default: 'en' }}{% if include.past %} is-past{% endif %}">
+  <a class="card-link" href="{{ r.url | relative_url }}">
+    <div class="card-media">
+      <img src="{{ r.image | relative_url }}" alt="" loading="lazy" width="600" height="340">
+      <span class="chip">{{ r.duration }}</span>
+      {%- if include.past %}<span class="chip chip--muted">{% if fr %}Passée{% else %}Past{% endif %}</span>{% endif %}
+    </div>
+    <div class="card-body">
+      <p class="eyebrow">{{ r.dates_label }}</p>
+      <h3 class="card-title">{{ r.title }}</h3>
+      <p class="card-text">{{ r.tagline }}</p>
+      <ul class="card-meta">
+        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ r.place }}</li>
+        {%- if r.price_from %}
+        <li><i class="fa-solid fa-tag" aria-hidden="true"></i> {% if fr %}Dès{% else %}From{% endif %} €{{ r.price_from }}</li>
+        {%- endif %}
+      </ul>
+    </div>
+  </a>
+</article>

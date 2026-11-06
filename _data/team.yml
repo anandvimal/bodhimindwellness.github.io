@@ -1,0 +1,66 @@
+# Team members. Each "id" is used in retreat pages (teachers: [manjusha, simla]).
+# Bios use plain text; leave a blank line between paragraphs using the | block style.
+
+- id: manjusha
+  name: Dr Manjusha Coonjan
+  photo: /assets/img/team-manjusha.jpg
+  role:
+    en: MD, PGDYT · Yoga & cognitive behaviour therapist, life coach
+    fr: Médecin, PGDYT · Yogathérapeute & thérapeute cognitivo-comportementale, coach de vie
+  bio:
+    en: |
+      Dr Manjusha Coonjan is a general practitioner, yoga teacher, yoga therapist and life coach. Her personal experience of treating physical and mental-emotional health problems through yoga motivated her to deepen her knowledge in this field through further training in yoga and therapy. As a spiritual seeker, she has practised a variety of meditation techniques and has been initiated into the Eastern practices of the Divine Mother in Shree Vidya and the 21 Taras.
+
+      Manjusha provides a nurturing environment for her patients, offering a silent space and an attentive, empathetic ear. She authentically reflects her patients' true selves and helps them remove the obstacles to their inner growth. If you're ready to seek and abide in peace and joy, contact Dr Manjusha today.
+    fr: |
+      Dr Manjusha Coonjan est médecin généraliste, professeure de yoga, yogathérapeute et coach de vie. Elle a traité ses propres problèmes de santé physique et mento-émotionnels grâce au yoga, ce qui l'a motivée à approfondir ses connaissances en enseignement et thérapie du yoga en Inde et aux États-Unis. En tant que chercheuse spirituelle, elle a pratiqué une variété de techniques de méditation et a été initiée aux pratiques orientales de la Mère Divine dans Shree Vidya et les 21 Taras.
+
+      Dr Manjusha offre à ses patients un espace sécurisé, un soutien attentif et empathique, les aidant à surmonter les obstacles de l'ego et à favoriser leur croissance intérieure. Êtes-vous prêt à vous orienter et demeurer dans la paix et la joie ?
+
+- id: simla
+  name: Simla Lubah
+  photo: /assets/img/team-simla.jpg
+  role:
+    en: Certified yoga instructor · Wellness advocate
+    fr: Instructrice de yoga certifiée · Ambassadrice du bien-être
+  bio:
+    en: |
+      With over 30 years in healthcare as an experienced nurse and 3 years as a dedicated yoga instructor, Simla is passionate about guiding individuals toward holistic wellness. She blends traditional practices with modern techniques to foster a balanced experience. She views yoga as a transformative tool, creating a nurturing space for all levels to explore their potential through mindful movement and breathwork.
+
+      With a strong foundation in human anatomy, Simla prioritises safety and continuously expands her expertise through workshops. Join her on the mat for a journey of self-discovery and inner peace, where we cultivate mindfulness, flexibility and community. Let's embrace the transformative power of yoga together.
+    fr: |
+      Avec plus de 30 ans d'expérience en tant qu'infirmière et 3 ans comme instructrice de yoga, Simla est passionnée par l'orientation des individus vers le bien-être holistique. Elle allie les pratiques traditionnelles aux techniques modernes pour favoriser une expérience équilibrée. Elle considère le yoga comme un outil de transformation, créant un espace nourrissant pour tous les niveaux afin d'explorer leur potentiel par le mouvement conscient et le travail sur la respiration.
+
+      Forte d'une solide base en anatomie humaine, Simla privilégie la sécurité et développe continuellement son expertise au travers d'ateliers. Rejoignez-la sur le tapis pour un voyage de découverte de soi et de paix intérieure, où nous cultivons la pleine conscience, la flexibilité et la communauté. Embrassons ensemble le pouvoir de transformation du yoga.
+
+- id: laetitia
+  name: Brähmani Laëtitia
+  photo: /assets/img/team-laetitia.jpg
+  role:
+    en: Master 2 Psychoanalysis, Schizoanalysis · Poet
+    fr: Master 2 Psychanalyse, Schizoanalyse · Poétesse
+  bio:
+    en: |
+      Brähmani Laëtitia Boqui Queni holds degrees in contemporary philosophy and social psychoanalysis. For several years she has practised artistic intervention, with co-creation collectives and individuals, to help them rediscover their singularity, return to the 'self' and recreate. Devoted to the Divine Mother (Shree Vidya) and a practitioner of the 21 Taras, she guides courses in philosophy, spirituality and ethics in a direct and intense manner, helping participants gain a deep understanding of themselves and their environment.
+
+      As a writer and playwright she has published "Le Dernier Malbar" (L'Harmattan, Paris, 2014), and as a poet "Fonnkèr La Liberté", a French–Reunionese Creole bilingual book (L'Harmattan, Paris, 2016). She has also been an editor and head of the Kreatif Collection at Éditions Héva since September 2019.
+    fr: |
+      Brähmani Laëtitia Boqui Queni est diplômée en philosophie contemporaine et en psychanalyse sociale. Elle pratique depuis plusieurs années l'intervention artistique, tant pour des collectifs en co-création que pour des individus, afin de les aider à retrouver leur singularité et à se réinventer. Dévouée à la Mère divine (Shree Vidya) et pratiquante des 21 Taras, elle guide les cours de philosophie, spiritualité et éthique d'une manière directe et intense, aidant les participants à acquérir une compréhension profonde d'eux-mêmes et de leur environnement.
+
+      En tant qu'écrivaine et auteure de théâtre, elle a publié « Le Dernier Malbar » (L'Harmattan, Paris, 2014) et en tant que poétesse, « Fonnkèr La Liberté », bilingue français-créole réunionnais (L'Harmattan, Paris, 2016). Elle est également éditrice et responsable de la Collection Kreatif aux Éditions Héva depuis septembre 2019.
+
+- id: danitza
+  name: Danitza Tuyau
+  photo: /assets/img/team-danitza.jpg
+  role:
+    en: MA Counselling · Personal development coach
+    fr: Master en counseling · Coach en développement personnel
+  bio:
+    en: |
+      Danitza is a personal development coach who is passionate about helping people transform their lives. She is fascinated by the power of the brain and mind, and how ordinary people can create extraordinary lives. Her interest in human psychology led her to a master's degree in counselling, which equipped her with the skills to help others achieve their goals. Danitza helps young girls and women discover their inner power and unleash their infinite potential. She believes that everyone can gain or regain self-confidence, and is dedicated to helping women find the key to their inner strength.
+
+      With years of experience and training, Danitza has developed tools to help every person and personality. If you are looking to change your life, achieve a goal or reconnect with yourself, contact Danitza for an online session and start your personal transformation now.
+    fr: |
+      Danitza est une coach de développement personnel passionnée par la transformation de vies ordinaires en vies extraordinaires. Sa fascination pour le potentiel du cerveau et de l'esprit l'a conduite à poursuivre une maîtrise en counseling, lui conférant les compétences nécessaires pour guider les autres vers l'accomplissement de leurs objectifs. Spécialisée dans l'autonomisation des jeunes filles et des femmes, elle croit fermement en leur capacité à retrouver confiance en elles et à libérer leur potentiel infini.
+
+      Forte d'années d'expérience et de formation, Danitza a mis au point des outils adaptés à chaque individu. Si vous aspirez à changer votre vie, à atteindre vos objectifs ou à vous reconnecter à vous-même, contactez Danitza pour une session en ligne et initiez votre parcours vers l'épanouissement personnel.

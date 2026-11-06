@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html>
-
-
-  <head>
-    {% include head.html %}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  </head>
-  
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+{%- if page.ref -%}
+  {%- assign alt = site.posts | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first -%}
+{%- endif -%}
+{%- assign start_lang = page.lang | default: "en" -%}
+<html lang="{{ start_lang }}" data-lang="{{ start_lang }}"{% if page.lang %} data-page-lang="{{ page.lang }}"{% endif %}{% if alt %} data-alt="{{ alt.url | relative_url }}"{% endif %}>
+<head>
+  {% include head.html %}
+</head>
+<body class="{{ page.body_class }}">
+  {% include header.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
 </html>

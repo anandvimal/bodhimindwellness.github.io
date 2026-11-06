@@ -1,25 +1,16 @@
 ---
-permalink: /404.html
 layout: default
+permalink: /404.html
+title: Page not found
+sitemap: false
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section class="container not-found">
+  {% include logo.html %}
+  <p class="eyebrow">404</p>
+  <h1><span class="l-en">This page has drifted away</span><span class="l-fr">Cette page s'est envolée</span></h1>
+  <p class="lead" style="margin:0 auto 2em"><span class="l-en">The page you are looking for doesn't exist or has moved. Take a breath, and let's find your way back.</span><span class="l-fr">La page que vous cherchez n'existe pas ou a été déplacée. Respirez, et retrouvons votre chemin.</span></p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="{{ '/' | relative_url }}"><span class="l-en">Go to the home page</span><span class="l-fr">Retour à l'accueil</span></a>
+    <a class="btn btn-ghost" href="{{ '/retreats/' | relative_url }}"><span class="l-en">See retreats</span><span class="l-fr">Voir les retraites</span></a>
+  </div>
+</section>
